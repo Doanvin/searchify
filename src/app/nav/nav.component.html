@@ -10,17 +10,17 @@
 
 <div class="container-fluid panel__wrapper">
   <div class="panel">
-      <form action="" method="get" class="search-form" id="search">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm" action="" method="get" class="search-form" id="search">
           <div class="field">
               <div class="control">
-                  <input class="input" type="text" placeholder="Ex. Jimi Hendrix">
+                  <input #query id="query" name="name" class="input" type="text" placeholder="Ex. Jimi Hendrix">
               </div>
           </div>
         
           <div class="field has-addons">
               <div class="control is-expanded">
                 <div class="select is-fullwidth">
-                  <select name="search-type">
+                  <select #search-type name="type">
                     <option value="artist">Artist</option>
                     <option value="album">Album</option>
                     <option value="track">Track</option>
@@ -28,7 +28,7 @@
                 </div>
               </div>
               <div class="control">
-                <button type="submit" class="button is-primary">Search</button>
+                <button #handleSearch type="submit" class="button is-primary" [disabled]="!f.valid">Search</button>
               </div>
             </div>
         </form>
