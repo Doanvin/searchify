@@ -1,0 +1,48 @@
+$color-primary: #1ED760 !default;
+$nav-font-size: 32px !default;
+$nav-font-family: 'Bungee', cursive !default;
+$nav-link-color: #1a1a1a !default;
+$nav-link-color-highlight: #fefefe !default;
+
+
+
+.nav {
+    font-family: $nav-font-family;
+    font-size: $nav-font-size;
+
+    &__wrapper {
+        background-color: $color-primary;
+        min-height: 75px;
+        line-height: 75px;
+    }
+
+    &--centered {
+        display: block;
+        text-align: center;
+    }
+
+    &__item {
+        height: 100%;
+        margin: auto;
+    }
+
+    &__link {
+        padding: 15px;
+        text-decoration: none;
+    }
+
+    &__link:hover {
+        color: $nav-link-color;
+        background-color: $nav-link-color-highlight;
+    }
+}
+
+.panel {
+    &__wrapper {
+        background-color: #1a1a1a;
+    }
+}
+
+.search-form {
+    padding: 15px 10px;
+}
